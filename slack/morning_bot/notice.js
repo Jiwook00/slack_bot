@@ -1,6 +1,6 @@
 module.exports = (slackApp) => {
   slackApp.client.chat.postMessage({
-    channel: "bolt_start",
+    channel: "challenge",
     text: `☀️ Good Morning`,
     blocks: [
       {
