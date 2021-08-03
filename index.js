@@ -21,6 +21,7 @@ stand_up_bot.modal(slackApp);
 stand_up_bot.post(slackApp);
 
 //morning_bot.notice(slackApp);
+morning_bot.modal(slackApp);
 
 (async () => {
   await slackApp.start(port || 4000);
