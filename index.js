@@ -10,7 +10,7 @@ const configuration = require("./slack/config");
 const { App } = require("@slack/bolt");
 const slackApp = new App(configuration);
 
-const { stand_up_bot } = require("./slack");
+const { stand_up_bot, morning_bot } = require("./slack");
 
 app.get("/stand-up/notice", (req, res) => {
   stand_up_bot.notice(slackApp);
@@ -19,6 +19,8 @@ app.get("/stand-up/notice", (req, res) => {
 
 stand_up_bot.modal(slackApp);
 stand_up_bot.post(slackApp);
+
+//morning_bot.notice(slackApp);
 
 (async () => {
   await slackApp.start(port || 4000);
