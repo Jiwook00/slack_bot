@@ -18,6 +18,7 @@ app.get("/stand-up/notice", (req, res) => {
 });
 
 stand_up_bot.modal(slackApp);
+stand_up_bot.post(slackApp);
 
 (async () => {
   await slackApp.start(port || 4000);
