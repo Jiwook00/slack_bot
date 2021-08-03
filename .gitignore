@@ -1,0 +1,12 @@
+# dotenv environment variables file
+.env
+.env.test
+
+# config
+config.json
+
+# packge
+package-lock.json
+
+
+node_modules/

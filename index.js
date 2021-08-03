@@ -17,6 +17,8 @@ app.get("/stand-up/notice", (req, res) => {
   res.send("OK");
 });
 
+stand_up_bot.modal(slackApp);
+
 (async () => {
   await slackApp.start(port || 4000);
   console.log("⚡️ Bolt app is running!");
