@@ -30,6 +30,10 @@ schedule.scheduleJob("00 00 06 * * 1-5", () => {
   morning_bot.notice(slackApp);
 });
 
+schedule.scheduleJob("00 03 06 * * 1-5", () => {
+  morning_bot.done(slackApp);
+});
+
 morning_bot.modal(slackApp);
 morning_bot.post(slackApp);
 
